@@ -1,0 +1,29 @@
+<h1>Demo songs uploader </h1>
+<!-- <div class="wrap_cstm_search">
+  <span class="cstm_srch_wrap head_srch">
+    <%#= text_field_tag "search_artist", "", class: "form-control cstm_srch", placeholder: "Search...", id: 'search_artist'%>
+    <i class="fa fa-search"></i>
+  </span>
+   <div id ="artist_details">
+      <%# render "home/artist_list" %>
+    </div>
+  </div> -->
+ <%= link_to "upload song", songs_path%>
+<div>
+  <%@song.each do |song|%>
+    <audio controls src="<%= song.audio_song.url %>"></audio>
+  <%end%>
+</div>
+
+<!-- <script type="text/javascript">
+ $('#search_artist').on('keyup', function(){
+    $.ajax({
+      type: 'get',
+      dataType: 'script',
+      url: '/search_artist',
+      data: {search: $(this).val()}
+    }).done(function (response) {
+    });
+  });
+  </script>
+ -->

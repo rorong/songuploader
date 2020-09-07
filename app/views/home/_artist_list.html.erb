@@ -1,0 +1,17 @@
+<% if @search_result.present? %>
+  <div class="artist_details">
+    <div class="dropdown">
+      <div class="dropdown-content">
+        <% if params[:search] %>
+          <% if @search_result.present? %>
+            <% @search_result.each do |sr| %>
+               <a href="javascript:void(0)" class="text_initial tile_class_srch"  data-tiletitle="<%= sr[:name] %>" data-tileid="<%= sr[:email] %>" data-tilecontenttype="<%= sr[:content_type] %>"><%= sr[:name] %></a>
+            <% end %>
+          <% else %>
+            <p>No results found</p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
