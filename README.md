@@ -19,7 +19,8 @@ application up and running.
 
 # songs upload
  * You can upload songs from the admin pannel "http://localhost:3000/admin/song/new"
-   ![Screenshot](admin.png)
+ ![admin](https://user-images.githubusercontent.com/46310697/92379151-99d1c680-f124-11ea-9ee5-647d380f94bb.png)
+
 
 
  * You can upload song after login also.
