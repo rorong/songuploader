@@ -19,7 +19,9 @@ application up and running.
 
 # songs upload
  * You can upload songs from the admin pannel "http://localhost:3000/admin/song/new"
-   <%= image_tag "admin.png"%>
+   ![Screenshot](admin.png)
+
+
  * You can upload song after login also.
  * After upload you can enjoy all songs that are uploaded.
 *
