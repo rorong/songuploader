@@ -18,7 +18,7 @@ class User < ApplicationRecord
       connect_to_spotify(auth)
     else
       unless @user
-        @user = User.create(
+        @user = User.new(
           uid:auth.uid,
           provider: auth.provider,
           first_name: auth.info.first_name,
@@ -29,9 +29,8 @@ class User < ApplicationRecord
           # date_of_birth:    User.dummy_email(auth),
           password: Devise.friendly_token[0, 20]
         )
-        # @user.skip_confirmation!
-        # @user.save
-        @user
+        @user.skip_confirmation!
+        @user.save
       end
     end
     return @user
@@ -40,7 +39,7 @@ class User < ApplicationRecord
   def self.connect_to_facebook(auth)
     @user = User.where(uid: auth.uid).first
      unless @user
-      @user = User.create(
+      @user = User.new(
           uid:auth.uid,
           provider: auth.provider,
           first_name: auth.info.first_name,
@@ -49,8 +48,8 @@ class User < ApplicationRecord
           phone_number: "54475757",
           password: Devise.friendly_token[0, 20]
         )
-      # @user.skip_confirmation!
-      # @user.save
+      @user.skip_confirmation!
+      @user.save
       @user
     end
     return @user
@@ -58,17 +57,18 @@ class User < ApplicationRecord
   def self.connect_to_spotify(auth)
     @user = User.where(uid: auth.uid).first
      unless @user
-      @user = User.create(
+      @user = User.new(
           uid:auth.uid,
           provider: auth.provider,
           first_name: auth.info.name,
           last_name:auth.info.name,
           email: auth.info.email,
           username: auth.info.name,
+          phone_number: "324323423423",
           password: Devise.friendly_token[0, 20]
         )
-      # @user.skip_confirmation!
-      # @user.save
+      @user.skip_confirmation!
+      @user.save
       @user
     end
     return @user
