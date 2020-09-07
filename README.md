@@ -16,6 +16,8 @@ application up and running.
 * email: admin123@ongraph.com
 * password: password
 * Login to the website after Sign up, facebook,linkdin or spotify.
+ ![login](https://user-images.githubusercontent.com/46310697/92380074-2466f580-f126-11ea-8ce6-1e52a7052ccb.png)
+
 
 # songs upload
  * You can upload songs from the admin pannel "http://localhost:3000/admin/song/new"
@@ -27,4 +29,4 @@ application up and running.
   ![user](https://user-images.githubusercontent.com/46310697/92379679-7c512c80-f125-11ea-8c5b-eee1b81baed7.png)
 
  * After upload you can enjoy all songs that are uploaded.
-*
+
