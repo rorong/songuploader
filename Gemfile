@@ -48,7 +48,7 @@ gem 'omniauth-spotify'
 gem "figaro"
 gem 'pg_search'
 gem 'rails_admin', '~> 2.0'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 
 
 group :development, :test do
